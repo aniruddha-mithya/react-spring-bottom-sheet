@@ -1,4 +1,10 @@
-import { aside, scrollable, simple, sticky } from '../docs/headings'
+import {
+  aside,
+  reducedMotion,
+  scrollable,
+  simple,
+  sticky,
+} from '../docs/headings'
 import Footer from '../docs/Footer'
 import Hero from '../docs/Hero'
 import MetaTags from '../docs/MetaTags'
@@ -84,6 +90,17 @@ const IndexPage: NextPage<GetStaticProps> = ({
             'Or as an search overlay over a map perhaps. ',
           ]}
           example="/fixtures/aside"
+        />
+        <StickyNugget
+          flip
+          bg="bg-gray-500"
+          text="text-900"
+          heading={reducedMotion}
+          lead={[
+            "If you're facing performance issues with low power devices or old devices, you can turn off the spring and use reduced motion with reduceMotion=true",
+            'This mode is also automatically turned on when prefer reduced motion is set to true in user preferences',
+          ]}
+          example="/fixtures/reducedMotion"
         />
       </div>
     </main>
